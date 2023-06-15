@@ -1,0 +1,2 @@
+#0. Preprocessor
+*gcc -E "&CFILE" -o c"
