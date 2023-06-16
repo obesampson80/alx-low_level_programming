@@ -4,8 +4,7 @@
 /* more headers goes there */
 
 /**
- * main - Program to print negative, postive, or zero
- * using if statement
+ * main - Program to print -ve, +ve or 0 using if statement
  * return: 0 program success
 */
 int main(void)
@@ -15,15 +14,15 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-	if(n < 0)
+	if (n < 0)
 	{
 		printf("%d is negative\n", n);
 	}
-	if(n == 0)
+	if (n == 0)
 	{
 		printf("%d is zero\n", n);
 	}
-	if(n > 0)
+	if (n > 0)
 	{
 		printf("%d is positive\n", n);
 	}
