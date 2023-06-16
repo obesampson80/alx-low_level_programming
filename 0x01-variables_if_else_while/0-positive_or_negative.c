@@ -3,8 +3,11 @@
 #include <stdio.h>
 /* more headers goes there */
 
-/* main: Program to print negative, zero or positive based on random number n using if statement
- * return: 0 program success */
+/**
+ * main - Program to print negative, postive, or zero
+ * using if statement
+ * return: 0 program success
+*/
 int main(void)
 {
 	int n;
