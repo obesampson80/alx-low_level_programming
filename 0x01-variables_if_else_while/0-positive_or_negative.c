@@ -5,7 +5,7 @@
 
 /**
  * main - Program to print -ve, +ve or 0 using if statement
- * return: 0 program success
+ * Return: 0 program success
 */
 int main(void)
 {
