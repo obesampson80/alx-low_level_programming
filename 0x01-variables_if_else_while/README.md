@@ -8,3 +8,13 @@
 *Program that prints albhabets a-z in lower and uppercase"
 #4. When I was having that alphabet soup, I never thought that it would pay off
 *A C program that prints a-z in lowercase except q and e*
+#5. Numbers
+*A C program that prints 0123456789*
+#6. Numberz
+*A C program that prints 0123456789 using putchar*
+#7. Smile in the mirror
+*A C program that prints the lowercase alphabet in reverse*
+#8. Hexadecimal
+*A C program that prints all the numbers in base 16 in lowercase*
+#9. Patience, persistence and perspiration make an unbeatable combination for success
+*A program that prints all possible combination of a single-digit numbers*
