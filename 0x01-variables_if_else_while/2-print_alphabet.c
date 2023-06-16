@@ -13,4 +13,6 @@ int main(void)
     	{
         	putchar(az[i]);
     	}
+
+	return 0;
 }
