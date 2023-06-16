@@ -6,3 +6,5 @@
 *Program to print the alphabets in lowercase using putchar*
 #3. alphABET
 *Program that prints albhabets a-z in lower and uppercase"
+#4. When I was having that alphabet soup, I never thought that it would pay off
+*A C program that prints a-z in lowercase except q and e*
