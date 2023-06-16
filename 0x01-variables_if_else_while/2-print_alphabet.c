@@ -2,17 +2,19 @@
 
 /**
  * main - Program to print a-z in lowercase using putchar
+ * followed by a newline
  * Return: 0 if program executed successfully
  */
 
 int main(void)
 {
-	char az[27] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
-    	int i;
-    	for (i = 0; i < 27; i++)
-    	{
-        	putchar(az[i]);
-    	}
+	char az;
 
-	return 0;
+	for (az = 'a'; az <= 'z'; az++)
+	{
+		putchar(az);
+	}
+	putchar('\n');
+
+	return (0);
 }
