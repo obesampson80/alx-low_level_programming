@@ -8,23 +8,24 @@
 
 int main(void)
 {
-	int a;
-	int b;
+    int a;
+    int b;
 
-	b = 1;
+    for (a = 0; a < 10; a++)
+    {
+        for (b = a + 1; b < 10; b++)
+        {
+            putchar('0' + a);
+            putchar('0' + b);
 
-	for (a = 0; a < 9; a++)
-	{
-		if ((a + b) != 17)
-		{
-			putchar('0' + a);
-			putchar('0' + b);
-			putchar(',');
-			putchar(' ');
-		}
-		b = b + 1;
-	}
-	putchar('\n');
+            if ((a + b) != 17)
+            {
+                putchar(',');
+                putchar(' ');
+            }
+        }
+    }
+    putchar('\n');
 
-	return (0);
+    return (0);
 }
