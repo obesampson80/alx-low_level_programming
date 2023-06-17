@@ -19,7 +19,11 @@ int main(void)
 			{
 				if (a != b)
 				{
-					if ((a + b) != (b + a))
+					if ((a + b) == (b + a))
+					{
+						continue;
+					}
+					else
 					{
 						putchar('0' + a);
 						putchar('0' + b);
