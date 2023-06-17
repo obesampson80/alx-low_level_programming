@@ -11,18 +11,18 @@ int main(void)
 	int a;
 	int b;
 
+	b = 1;
+
 	for (a = 0; a < 9; a++)
 	{
-		for (b = 1; b < 10; b++)
+		if ((a + b) != 17)
 		{
-			if ((a + b) != 17)
-			{
-				putchar('0' + a);
-				putchar('0' + b);
-				putchar(',');
-				putchar(' ');
-			}
+			putchar('0' + a);
+			putchar('0' + b);
+			putchar(',');
+			putchar(' ');
 		}
+		b = b + 1;
 	}
 	putchar('\n');
 
