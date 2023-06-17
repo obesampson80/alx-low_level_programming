@@ -17,20 +17,10 @@ int main(void)
 		{
 			if ((a + b) != 17)
 			{
-				if (a != b)
-				{
-					if ((a + b) == (b + a))
-					{
-						continue;
-					}
-					else
-					{
-						putchar('0' + a);
-						putchar('0' + b);
-						putchar(',');
-						putchar(' ');
-					}
-				}
+				putchar('0' + a);
+				putchar('0' + b);
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
