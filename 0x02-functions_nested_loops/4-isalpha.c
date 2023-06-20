@@ -8,7 +8,7 @@
  */
 int _isalpha(int c)
 {
-	char az, aZ; 
+	char az, aZ;
 	int result_az, result_aZ, check;
 
 	for (az = 'a'; az <= 'z'; az++)
