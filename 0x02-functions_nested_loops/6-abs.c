@@ -6,7 +6,7 @@
  *
  *  Return: int value without sign
  */
-int _abs i(int x)
+int _abs(int x)
 {
 	if (x >= 0)
 	{
