@@ -10,13 +10,13 @@
 
 void output(char *str)
 {
-        int i = 0;
+	int i = 0;
 
-        while (str[i] != '\0')
-        {
-                _putchar(str[i]);
-                i++;
-        }
+	while (str[i] != '\0')
+	{
+		_putchar(str[i]);
+		i++;
+	}
 }
 
 /**
@@ -28,9 +28,9 @@ void output(char *str)
 
 int main(void)
 {
-        char *str = "_putchar\n";
+	char *str = "_putchar\n";
 
-        output(str);
+	output(str);
 
-        return (0);
+	return (0);
 }
