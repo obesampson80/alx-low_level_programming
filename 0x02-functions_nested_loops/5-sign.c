@@ -8,19 +8,18 @@
  */
 int print_sign(int n)
 {
-	signed char ret;
+	int ret;
+
+	ret = -1;
 
 	if (n > 0)
 	{
 		ret = +1;
 	}
-	else if (n == 0)
+	if (n == 0)
 	{
-		ret = 00;
+		ret = 0;
 	}
-	else
-	{
-		ret = -1;
-	}
+
 	return (ret);
 }
