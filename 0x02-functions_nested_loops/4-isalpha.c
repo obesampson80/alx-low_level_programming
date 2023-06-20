@@ -27,16 +27,16 @@ int _isalpha(int c)
 	{
 		if (aZ == c)
 		{
-			result_AZ = 1;
+			result_aZ = 1;
 			break;
 		}
 		else
 		{
-			result_AZ = 0;
+			result_aZ = 0;
 		}
 	}
 
-	if ((result_az == 1) || (result_AZ == 1))
+	if ((result_az == 1) || (result_aZ == 1))
 	{
 		check = 1;
 	}
