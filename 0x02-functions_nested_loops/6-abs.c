@@ -3,6 +3,7 @@
 /**
  * _abs - Function that computes the absolute value
  *  of an integer
+ *  @x: int value to find its absolute value
  *
  *  Return: int value without sign
  */
