@@ -40,7 +40,7 @@ void output(char *str)
  * Return: On success 0
  */
 
-int main(void)
+main(void)
 {
         char *str = "_putchar\n";
 
