@@ -14,18 +14,6 @@ void print_alphabet(void)
 	{
 		_putchar(az);
 	}
+
 	_putchar('\n');
-}
-
-/**
- * main - Program entry
- * prints a-z 
- *
- * Return: 0 program success
- */
-int main(void)
-{
-	print_alphabet(void);
-
-	return (0);
 }
