@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * -abs - Function that computes the absolute value
+ * _abs - Function that computes the absolute value
  *  of an integer
  *
  *  Return: int value without sign
