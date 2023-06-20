@@ -2,30 +2,30 @@
 
 /**
  * print_alphabet - Function to output a-z
- * @str: string variable to print
+ * followed by new line
  *
  * Return: void
  */
 void print_alphabet(void)
 {
-	char *str;
+	char az;
 	
-	for (int i = 'a'; i <= 'z'; i++)
+	for (az = 'a'; az <= 'z'; az++)
 	{
-		_putchar(str[i]);
+		_putchar(az);
 	}
+	_putchar('\n');
 }
 
 /**
  * main - Program entry
- * prints a-z followed by newline
+ * prints a-z 
  *
  * Return: 0 program success
  */
 int main(void)
 {
 	print_alphabet();
-	_putchar("\n");
 
 	return (0);
 }
