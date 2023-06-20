@@ -8,11 +8,8 @@
  */
 int _isalpha(int c)
 {
-	char az;
-	char AZ;
-	int result_az;
-	int result_AZ;
-	int check;
+	char az, aZ; 
+	int result_az, result_aZ, check;
 
 	for (az = 'a'; az <= 'z'; az++)
 	{
@@ -26,9 +23,9 @@ int _isalpha(int c)
 			result_az = 0;
 		}
 	}
-	for (AZ = 'A'; AZ <= 'Z'; AZ++)
+	for (aZ = 'A'; aZ <= 'Z'; aZ++)
 	{
-		if (AZ == c)
+		if (aZ == c)
 		{
 			result_AZ = 1;
 			break;
