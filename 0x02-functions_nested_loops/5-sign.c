@@ -12,7 +12,7 @@ int print_sign(int n)
 
 	if (n > 0)
 	{
-		ret = 1;
+		ret = +1;
 	}
 	else if (n == 0)
 	{
@@ -22,5 +22,5 @@ int print_sign(int n)
 	{
 		ret = -1;
 	}
-	return ret;
+	return (ret);
 }
