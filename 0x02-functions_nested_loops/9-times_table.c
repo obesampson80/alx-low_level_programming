@@ -20,14 +20,14 @@ void times_table(void)
 
 			if (b == 0)
 			{
-				_putchar((tmp + '0');
+				_putchar(tmp + '0');
 			}
 			if ((tmp < 10) && (b != 0))
 			{
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
-				_putchar((tmp + '0');
+				_putchar(tmp + '0');
 			}
 			else if (tmp >= 10)
 			{
