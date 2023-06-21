@@ -15,7 +15,7 @@ void print_to_98(int n)
 	{
 		if (i < 10)
 		{
-			_putcahr(i + '0');
+			_putchar(i + '0');
 			_putchar(',');
 			_putchar(' ');
 		}
@@ -31,5 +31,5 @@ void print_to_98(int n)
 			}
 		}
 	}
-	putchar('\n');
+	_putchar('\n');
 }
