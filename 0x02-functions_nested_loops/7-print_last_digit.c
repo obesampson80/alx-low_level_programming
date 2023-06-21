@@ -18,7 +18,7 @@ int print_last_digit(int x)
 
 	if (ret < 0)
 	{
-		ret = -ret:
+		ret = -ret;
 	}
 	_putchar(ret + '0');
 
