@@ -9,27 +9,19 @@
 int main(void)
 {
 	long int j;
-	long int max_prime;
 	long int i;
 
 	j = 612852475143;
-	max = 2;
 
-	j /= 2;
-
-	for (i = 3; i <= sqrt(j); i += 2)
+	for (i = 2; i < j; i++)
 	{
 		while (j % i == 0)
 		{
-			max_prime = i;
 			j /= i;
 		}
 	}
 
-	if (j > 2)
-		max_prime = j;
-
-	printf("%ld\n", max);
+	printf("%ld\n", j);
 
 	return (0);
 }
