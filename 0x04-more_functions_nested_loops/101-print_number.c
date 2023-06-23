@@ -14,12 +14,18 @@ void print_number(int n)
 
 		n = -n;
 	}
-
-	while (n / 10 != 0)
+	if (n == 0)
 	{
-		_putchar(n % 10 + '0');
+		_putchar('0');
+	}
+	else
+	{
+		while (n / 10 != 0)
+		{
+			_putchar(n % 10 + '0');
 
-		n = n / 10;
+			n = n / 10;
+		}
 	}
 	_putchar('\n');
 }
