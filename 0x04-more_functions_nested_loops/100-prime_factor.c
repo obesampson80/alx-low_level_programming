@@ -1,51 +1,35 @@
 #include <stdio.h>
+#include "math.h"
 
 /**
- * prime_factor - function that finds the highest prime facetor
- * of a number
- * @num: number to find its highest prime factor
- * Return: int value
- */
-int prime_factor(long int num)
-{
-	long int i;
-	long int j;
-	long int prime;
-
-	for (i = 2; i <= num / 2; i++)
-	{
-		for (j = 2; j <= i / 2; j++)
-		{
-			if (i % j == 0)
-			{
-				break;
-			}
-			else
-			{
-				if (z % i == 0)
-				{
-					prime = i;
-				}
-			}
-		}
-	}
-	return (prime);
-}
-
-/**
- * main - check for highest prime factor of 612852475143
- * followed by a new line
- * Return: 0 success always
+ * main - finds and print the largest prime factor
+ * of 612852475143 followed by a new line
+ * Return: 0 always success
  */
 int main(void)
 {
-	long int highest_prime;
+	long int j;
+	long int max_prime;
+	long int i;
 
-	highest_prime = prime_factor(612852475143);
+	j = 612852475143;
+	max = 2;
 
-	printf("The largest prime factor of 612852475143 is :%ld\n", highest_prime);
+	j /= 2;
+
+	for (i = 3; i <= sqrt(j); i += 2)
+	{
+		while (j % i == 0)
+		{
+			max_prime = i;
+			j /= i;
+		}
+	}
+
+	if (j > 2)
+		max_prime = j;
+
+	printf("%ld\n", max);
 
 	return (0);
 }
-
-
