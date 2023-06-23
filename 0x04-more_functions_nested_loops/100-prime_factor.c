@@ -8,9 +8,9 @@
  */
 int prime_factor(long int num)
 {
-	int i;
-	int j;
-	int prime;
+	long int i;
+	long int j;
+	long int prime;
 
 	for (i = 2; i <= num / 2; i++)
 	{
@@ -39,7 +39,7 @@ int prime_factor(long int num)
  */
 int main(void)
 {
-	int highest_prime;
+	long int highest_prime;
 
 	highest_prime = prime_factor(612852475143);
 
