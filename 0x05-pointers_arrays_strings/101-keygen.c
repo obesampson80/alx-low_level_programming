@@ -12,9 +12,14 @@
  */
 int main(void)
 {
+	int sum;
+	int i;
+	char *pw;
+
+	sum = 0;
+	*pw = NULL;
+
 	srand(time(NULL));
-	int sum = 0;
-	char *pw = NULL;
 
 	do {
 		if (pw != NULL)
