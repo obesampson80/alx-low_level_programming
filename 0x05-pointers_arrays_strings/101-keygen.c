@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <time.h>
 
+#define PW_LENGTH 100
+#define CHECKSUM 2772
+
 /**
  * main - program that generates random valid passwords
  * for the program 101-crackme
@@ -9,16 +12,23 @@
  */
 int main(void)
 {
-	int sum;
-	char x;
-
 	srand(time(NULL));
-	while (sum <= 2645)
-	{
-		x = rand() % 128;
-		sum += x;
-		putchar(x);
-	}
-	putchar(2772 - sum);
+	int sum = 0;
+	char *pw = NULL;
+
+	do {
+		if (pw != NULL)
+			free(pw);
+		pw = malloc(PW_LENGTH + 1);
+		for (i = 0; i < PW_LENGTH; i++)
+		{
+			pw[i] = rand() % 128;
+			sum += pw[i];
+		}
+		pw[PW_LENGTH] = '\0';
+	} while (sum != CHECKSUM);
+
+	putchar(pw);
+
 	return (0);
 }
