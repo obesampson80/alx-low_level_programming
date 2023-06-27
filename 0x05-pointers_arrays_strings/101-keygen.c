@@ -16,8 +16,8 @@ int main(void)
 	while (sum <= 2111)
 	{
 		x = rand() % 128;
-		sum += c;
-		putchar(c);
+		sum += x;
+		putchar(x);
 	}
 	putchar(2222 - sum);
 	return (0);
