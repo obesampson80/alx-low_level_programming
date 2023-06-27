@@ -6,34 +6,45 @@
 #define CHECKSUM 2772
 
 /**
- * main - program that generates random valid passwords
- * for the program 101-crackme
- * Return: 0 Always
+* gen_pw - A function that generate a random password an place it
+* inside an allucated variable named password
+* @pw_sum: A pointer to a variable that keep tracks genretad password
+* ascii value sum.
+* Return: The allocated char* password
+*/
+char *gen_pw(int *pw_sum)
+{
+	const char a_Z[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char *pw = malloc(PW_LENGTH + 1);
+	int i;
+
+	srand(time(NULL));
+	for (i = 0; *pw_sum < CHECKSUM - (127); ++i) {
+		pw[i] = a_Z[rand() % (sizeof(a_Z) - 1)];
+		*pw_sum += (int) pw[i];
+	}
+	pw[i] = '\0';
+	return (pw);
+}
+
+/**
+ * main - Entry point
+ * Description: A program that generetes a valid key for the program 101-crackme
+ * Return: 0
  */
 int main(void)
 {
-	int sum;
-	int i;
-	char *pw;
+	int sum = 0;
+	char *pw = gen_pw(&sum);
 
-	sum = 0;
-	*pw = NULL;
+	char *diff = malloc(2);
+	diff[0] = CHECKSUM - sum;
+	diff[1] = '\0';
+	strcat(pw, diff);
 
-	srand(time(NULL));
+	printf("%s", pw);
 
-	do {
-		if (pw != NULL)
-			free(pw);
-		pw = malloc(PW_LENGTH + 1);
-		for (i = 0; i < PW_LENGTH; i++)
-		{
-			pw[i] = rand() % 128;
-			sum += pw[i];
-		}
-		pw[PW_LENGTH] = '\0';
-	} while (sum != CHECKSUM);
-
-	putchar(pw);
-
+	free(pw);
+	free(diff);
 	return (0);
 }
