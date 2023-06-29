@@ -11,10 +11,11 @@ char *cap_string(char *str)
 	int n;
 
 	i = 0;
-	n = i - 1;
-
+	
 	while (str[i])
 	{
+		n = i - 1;
+
 		while (!(str[i] >= 'a' && str[i] <= 'z'))
 			i++;
 
