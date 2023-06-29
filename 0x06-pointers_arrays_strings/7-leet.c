@@ -7,24 +7,20 @@
 */
 char *leet(char *str)
 {
-	int x1;
-	int x2;
-	char lit[8];
+	int i;
+	int j;
+	char *decode;
+	char *encode;
 
-	x1 = 0;
-	lit[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
+	decode = "aAeEoOtTlL";
+	encode = "4433007711";
 
-	while (str[x1])
+	for (i = 0; s[i]; i++)
 	{
-		for (x2 = 0; x2 <= 7; x2++)
-		{
-			if (str[x1] == lit[x2] ||
-			str[x1] - 32 == lit[x2])
-				str[x1] = x2 + '0';
-		}
-
-		x1++;
+		for (j = 0; decode[j]; j++)
+			if (s[i] == decode[j])
+				s[i] = encode[j];
 	}
 
-	return (str);
+	return (s);
 }
