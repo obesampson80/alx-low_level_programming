@@ -1,22 +1,30 @@
 #include "main.h"
 
 /**
-* print_number - prints an integer
-* @n: integer to print
-* Return: nothing
+* rot13 - encodes a string using rot13
+* @s: string to encode
+* Return: pointer to encoded string
 */
-void print_number(int n)
+char *rot13(char *s)
 {
-	unsigned int i;
+	int i;
+	int j;
 
-	if (n < 0)
+	char *a = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char *b = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	for (i = 0; s[i]; i++)
 	{
-		_putchar('-');
-		i = -n;
+		for (j = 0; a[j]; j++)
+		{
+			if (s[i] == a[j])
+			{
+				s[i] = b[j];
+				break;
+			}
+		}
 	}
-	else
-		i = n;
-	if (i / 10)
-		print_number(i / 10);
-	_putchar(i % 10 + '0');
+
+	return (s);
 }
+
