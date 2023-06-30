@@ -1,35 +1,58 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
-* print_buffer - prints a buffer
-* @b: the address of the memory to print
-* @size: the size of the memory to print
-* Return: nothing
-*/
+ * buffer_line - prints a s bytes of a buffer
+ * @c: buffer to print
+ * @s: bytes of buffer to print
+ * @l: line of buffer to print
+ * Return: void
+ */
+void buffer_line(char *c, int s, int l)
+{
+	int j, k;
+
+	for (j = 0; j <= 9; j++)
+	{
+		if (j <= s)
+			printf("%02x", c[l * 10 + j]);
+		else
+			printf(" ");
+		if (j % 2)
+			putchar(' ');
+	}
+	for (k = 0; k <= s; k++)
+	{
+		if (c[l * 10 + k] > 31 && c[l * 10 + k] < 127)
+			putchar(c[l * 10 + k]);
+		else
+			putchar('.');
+	}
+}
+
+/**
+ * print_buffer - prints a buffer
+ * @b: buffer to print
+ * @size: size of buffer
+ * Return: void
+ */
 void print_buffer(char *b, int size)
 {
-	int offset, b_index, c_index;
+	int i;
 
-	for (offset = 0; offset < size; offset += 10)
+	for (i = 0; i <= (size - 1) / 10 && size; i++)
 	{
-		/* print offset */
-		printf("%08x: ", offset);
-
-		/* print bytes in hex */
-		for (b_index = 0; b_index < 10; b_index++)
+		printf("%08x: ", i * 10);
+		if (i < size / 10)
 		{
-			(offset + b_index < size) ? printf("%02x", b[offset + b_index])
-				: printf("  ");
-			(b_index % 2) ? printf(" ") : 0;
+			buffer_line(b, 9, i);
 		}
-
-		/* print bytes in ascii */
-		for (c_index = 0; c_index < 10; c_index++)
-			(offset + c_index < size) ? printf("%c", (b[offset + c_index] >= 32 &&
-				b[offset + c_index] <= 126) ? b[offset + c_index] : '.') : 0;
-
-		printf("\n");
+		else
+		{
+			buffer_line(b, size % 10 - 1, i);
+		}
+		putchar('\n');
 	}
-
-	(size <= 0) ? printf("\n") : 0;
+	if (size == 0)
+		putchar('\n');
 }
