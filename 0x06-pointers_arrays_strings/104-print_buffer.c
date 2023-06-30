@@ -2,9 +2,10 @@
 
 /**
 * print_buffer - prints a buffer
- * @b: the address of the memory to print
- * @size: the size of the memory to print
- */
+* @b: the address of the memory to print
+* @size: the size of the memory to print
+* Return: nothing
+*/
 void print_buffer(char *b, int size)
 {
 	int offset, b_index, c_index;
