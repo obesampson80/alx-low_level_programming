@@ -6,12 +6,14 @@
 * @n: the number of integgers passed to the function
 * Return: the resulting sum
 */
-void print_numbers(const char *separator, const unsigned int n, ...)
+int sum_them_all(const unsigned int n, ...)
 {
 	unsigned int i;
 	int sum = 0;
 	va_list args;
 
+	if (n == 0)
+		return (0);
 	va_start(args, n);
 
 	for (i = 0; i < n; i++)
