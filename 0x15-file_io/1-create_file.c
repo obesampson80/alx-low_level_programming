@@ -11,11 +11,11 @@ int create_file(const char *filename, char *text_content)
 	int file_desc, write_result;
 
 	if (!filename)
-	exit(1);
+		exit(1);
 
 	file_desc = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (file_desc == -1)
-	exit(1);
+		exit(1);
 
 	if (text_content)
 	{
