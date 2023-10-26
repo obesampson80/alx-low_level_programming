@@ -1,1 +1,1 @@
-#Bit Manipulation Project
+Bit Manipulation Project
