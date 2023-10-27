@@ -10,17 +10,17 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int sam;
 	unsigned int num;
 
-	if (!b)
-		return (0);
-
-	for (sam = 0; b[sam]; sam++)
+	for (num = 0; b && *b; b++)
 	{
-		if (b[sam] < '0' || b[sam] > '1')
+		/* check for invalid chars */
+		if (*b != '0' && *b != '1')
 			return (0);
-		num = 2 * num + (b[sam] - '0');
+
+		/* shift num left and add current bit */
+		num <<= 1;
+		num += *b - '0';
 	}
 	return (num);
 }
